@@ -18,14 +18,14 @@ mh::FtpClient::FtpClient(const char* host , unsigned short port)
 
 bool mh::FtpClient::sendUser(const std::string& user)
 {   
-   return sendCommand(USER , user.c_str()) == RPLY_LOGIN_SUCCESSFUL ?
+   return sendCommand(CMD_USER , user.c_str()) == RPLY_LOGIN_SUCCESSFUL ?
                                               true : 
                                               false;                  
 }
 
  bool mh::FtpClient::sendPassword(const std::string& password)
  {
-    return sendCommand(PASSWORD , password.c_str()) == RPLY_SERVICE_READY_FOR_NEW_USER ? 
+    return sendCommand(CMD_PASSWORD , password.c_str()) == RPLY_SERVICE_READY_FOR_NEW_USER ? 
                                                        true : 
                                                        false;
  }                                                   
