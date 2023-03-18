@@ -12,7 +12,7 @@
 mh::Net::Net(const char* host , const unsigned short port) : m_host(host) ,
                                                         m_port(port)
 {
-    std::cout << "constructor...\n";
+   // std::cout << "constructor...\n";
 }
 
 bool mh::Net::connect()
